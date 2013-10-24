@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
+}
+
+dependencies {
+    compile group: 'com.codahale.dropwizard', name: 'dropwizard-core', version: '0.7.0-SNAPSHOT'
+    compile group: 'com.hubspot.dropwizard', name: 'dropwizard-guice', version: '0.7.0-SNAPSHOT'
+}
+
+apply plugin: 'application'
+
+mainClassName = 'com.example.helloworld.HelloWorldApplication'
+
+run {
+    args 'server', 'hello-world.yml'
+}
