@@ -2,13 +2,12 @@ apply plugin: 'java'
 
 repositories {
     mavenCentral()
-    maven {
-        url "https://oss.sonatype.org/content/repositories/snapshots"
-    }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+    maven { url "http://oss.sonatype.org/content/repositories/releases"}
 }
 
 dependencies {
-    compile group: 'com.codahale.dropwizard', name: 'dropwizard-core', version: '0.7.0-SNAPSHOT'
+    compile group: 'io.dropwizard', name: 'dropwizard-core', version: '0.7.0-rc1'
     compile group: 'com.hubspot.dropwizard', name: 'dropwizard-guice', version: '0.7.0-SNAPSHOT'
 }
 
